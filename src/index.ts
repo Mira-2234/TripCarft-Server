@@ -673,7 +673,7 @@ app.post("/api/ai/chat", protect, async (req: AuthRequest, res: Response) => {
 
     chat.messages.push({ role: "user", content: message, createdAt: new Date() });
 
-    const reply = generateChatReply(
+   const reply = await generateChatReply(
       message,
       chat.messages.map((m) => ({ role: m.role, content: m.content }))
     );

@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "TripCraft - AI Powered Travel Planning Platform (Backend API)",
   "main": "dist/index.js",
- "scripts": {
-  "dev": "nodemon --watch src --exec ts-node src/index.ts",
-  "build": "tsc -p tsconfig.json",
-  "start": "node dist/index.js",
-  "seed": "node -r ts-node/register src/scripts/seedTrips.ts"
-},
+  "scripts": {
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "seed": "node -r ts-node/register src/scripts/seedTrips.ts"
+  },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.112.3",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
